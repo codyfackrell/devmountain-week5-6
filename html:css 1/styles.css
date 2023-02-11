@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+    color: red;
+    font-weight: 700;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 25px 10px 25px;
+}
+
+#racetix-logo {
+    width: 150px
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-item {
+    display: flex; 
+    padding: 0 40px 0 40px;
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  background-color: white;
+  position: absolute;
+  width: 100%;
+  overflow: auto;
+  box-shadow: 0px 5px 10px 0px black;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 15px;
+}
+
+header a { 
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+header a:hover {
+    transform: scale(1.1, 1.1);
+}
+
+#cart {
+    display: flex;
+    align-items: center;
+}
+
+#cart-flag-img {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    padding: 0 0 0 5px;
+}
+
+#top-banner {
+    position: relative;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#top-banner::before {
+        content:"";
+        background-image: url(https://images.unsplash.com/photo-1520474151999-5cb75d6a9a62?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80);
+        background-position: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        filter: brightness(60%);
+        background-size: 100%;
+}
+
+#main-search {
+    position: relative;
+}
+
+.search-bar, .search-button {
+    box-sizing: border-box;
+    padding: 0;
+    font-size: 14px;
+    height: 45px;
+    border: 1px solid black;
+}
+
+.search-bar {
+    width: 500px;
+    padding-left: 15px;
+}
+
+.search-button { 
+    width: 100px;
+    background-color: white;
+}
+
+#top-races {
+    margin: 70px 50px 50px 50px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.subsections {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.race-card {
+    height: 300px;
+    width: 250px;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.race-card-img {
+    height: 200px;
+    width: 200px;
+    background-color: lightgrey;
+}
