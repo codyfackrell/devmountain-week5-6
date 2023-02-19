@@ -1,0 +1,101 @@
+body {
+  background: #ddd;
+  margin: 1rem;
+  padding: 1rem;
+  max-width: 500px;
+  margin: 2rem auto;
+  font-family: "Open Sans", sans-serif;
+}
+
+nav {
+	border-bottom: 2px solid orange;
+}
+
+h1 {
+	text-align: center;
+}
+
+ol {
+	padding-left: 0;
+}
+
+.crumb {
+	margin-right: 2em;
+	display: inline;
+}
+
+a {
+	color: orange;
+}
+
+a:visited {
+	color: crimson;
+}
+
+
+input {
+	display: block;
+}
+
+input[type="radio"] {
+	display: inline
+}
+
+img {
+	max-width: 300px;
+}
+
+#learn-more {
+	font-weight: bold;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#learn-more-input {
+	height: 20px;
+	width: 250px;
+	font-size: 14px;
+	border: 1px black solid;
+	border-radius: 5px;
+	padding-left: 5px;
+}
+
+#learn-more-btn {
+	height: 20px;
+	width: 60px;
+	background-color: aquamarine;
+	border: 1px black solid;
+	border-radius: 5px;
+	margin-top: 10px;
+}
+
+#learn-more-btn:hover {
+	background-color: rgb(68, 185, 146);
+}
+
+#faq {
+	font-weight: normal;
+}
+
+.favorite-btn {
+	height: 40px;
+	width: 200px;
+	margin: 5px;
+	background-color: yellow;
+	border: 1px yellowgreen solid
+}
+ 
+.favorite-btn:hover {
+	background-color: rgb(209, 209, 1);
+}
+
+.favorite-btn:active {
+	color: black;
+	transform: scale(.95, .95);
+}
+
+#food-warning {
+	font-style: italic;
+	font-size: 12px;
+}
