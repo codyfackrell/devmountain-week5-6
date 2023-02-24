@@ -102,14 +102,14 @@ document.getElementById('animals-button').addEventListener('click', ohMy)
 
 const repeatMyParam = () => {
     const repeatText = document.getElementById('repeat-text'); 
-    const word = 'NASCAR is cool'
+    const word = 'Cheese'
     
     axios.get(`http://localhost:3000/repeat/${word}`).then((res) => {
         console.log(res.data)
+
+        repeatText.textContent = res.data;
+        repeatText.style.display = 'block'
     })
-    
-    repeatText.textContent = res.data;
-    repeatText.style.display = 'block'
 }
 
 const repeatBtn = document.querySelector('#repeat-button'); 
@@ -138,7 +138,7 @@ repeatBtn.addEventListener('click', repeatMyParam)
 */
 
 const myQuery = () => {
-    axios.get('http://localhost:3000/?name=cody').then((res) => {
+    axios.get('http://localhost:3000/query-test?name=cody').then((res) => {
         console.log(res.data)
     })
 }
@@ -187,7 +187,7 @@ queryBtn.addEventListener('click', myQuery)
     
     Inside the function, select the input you just created in the HTML and save it to a variable called foodInput. 
     
-    Next, create an object called body inside the function. It should have one key-value pair. The key should be newFood (make sure to match the case and spelling exactly) and the value should be the value of the food input. 
+    Next, create an object called body inside the function. It should have one key-value pair. The key should be newFood (make sure to match the case and spelling exactly) and the value should be the value of the food input.
 
     Now make an axios post request to /food. Inside the parentheses where you passed the URL in, pass in body as the second argument. 
 
@@ -198,23 +198,22 @@ queryBtn.addEventListener('click', myQuery)
 
 const createFood = () => {
     const foodInput = document.getElementById('food-input')
-
+    console.log('cheese')
     let body = {
-        "newFood": "foodInput.value"
+        newFood: foodInput.value
     }
 
-    axios.post('/food', {body}).then((res) => {
+    axios.post('http://localhost:3000/food', body).then((res) => {
         console.log(res.data)
         for(let i = 0; i < res.data.length; i++) {
             let foodItem = document.createElement('p'); 
             foodItem.textContent = res.data[i];
-            console.log(foodItem)
-            document.body.form.appendChild(foodItem)
+            form.appendChild(foodItem)
         }
     })   
-    .catch(error => {
-        console.log(error)
-    }) 
 }
 
-document.getElementById('food-button').addEventListener('click', createFood)
+document.getElementById('food-button').addEventListener('click', (e) => {
+    e.preventDefault()
+    createFood()
+})
