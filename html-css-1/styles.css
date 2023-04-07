@@ -60,7 +60,10 @@ header a {
 }
 
 header a:hover {
-    transform: scale(1.1, 1.1);
+    /* transform: scale(1.1, 1.1); */
+    background-color: lightgrey;
+    height: 30px;
+    width: 30px;
 }
 
 #cart {
@@ -85,7 +88,7 @@ header a:hover {
 
 #top-banner::before {
         content:"";
-        background-image: url(https://images.unsplash.com/photo-1520474151999-5cb75d6a9a62?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80);
+        background-image: url(https://media.cnn.com/api/v1/images/stellar/prod/220218181540-02-daytona-500-qualifying.jpg?q=h_1406,w_2500,x_0,y_0);
         background-position: center;
         position: absolute;
         top: 0;
@@ -118,7 +121,7 @@ header a:hover {
     background-color: white;
 }
 
-#top-races {
+.section-header {
     margin: 70px 50px 50px 50px;
     font-size: 18px;
     font-weight: bold;
@@ -147,4 +150,13 @@ header a:hover {
     height: 200px;
     width: 200px;
     background-color: lightgrey;
+}
+
+footer {
+    height: 200px;
+    font-weight: bold;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-bottom: 20px;
 }
